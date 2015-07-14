@@ -15,7 +15,7 @@ except ImportError:
     except ImportError:
         sys.exit("Could not import module 'tkinter'.")
 
-from cjh import cli
+from cjh.cli import Cli
 from cjh.windowed_app import WindowedApp
 
 __author__ = 'Chris Horn <hammerhorn@gmail.com>'

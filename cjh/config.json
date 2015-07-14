@@ -1,6 +1,6 @@
 {
   "terminal": "terminator -x", 
-  "shell": "bash", 
+  "shell": "Tk", 
   "editor": "tk_text.py", 
   "language": "EN", 
   "acsiimation": "bounce_demo.py"
