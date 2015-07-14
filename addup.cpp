@@ -1,7 +1,9 @@
 #include <iostream>
-
 #include <stdlib.h>
 #include <stdio.h>
+
+/* Takes a list of numbers from the command line or stdin, and writes
+   the sum to stdout. */
 
 using namespace std;
 

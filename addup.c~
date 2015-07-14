@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Takes a list of numbers from the command line or stdin, and writes
-   the sum to stdout. */
-
 int main(int argc, char *argv[])
 {
     double numbers[10],

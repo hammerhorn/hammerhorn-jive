@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/* Boldens a single line of text from pipe or stdin. */
+
 int main(int argc, char* argv[])
 {
     char text[100];
