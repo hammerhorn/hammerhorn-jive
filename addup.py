@@ -1,40 +1,61 @@
 #!/usr/bin/env python
+"""
+Sum of a list
 
-import decimal, math, sys  # , timeit
+Find the sum of a user-input list of numbers.  It would be good to time
+each subroutine to see which is the fastest.
+"""
+import decimal
+import math
+import sys
 
-# Make command-line arguemtns work
 try:
     import numpy
-    numpy_available = True
+    NUMPY_AVAILABLE = True
 except ImportError:
-    numpy_available = False
+    NUMPY_AVAILABLE = False
 
-def numpy_method():
-    global num_list, total1, numpy_available
-    if numpy_available is not True:
-        total1 = 'Not available.'
+
+def numpy_method(nlist):
+    """
+    Find sum using the numpy module.
+    """
+    if NUMPY_AVAILABLE is not True:
+        total = 'Not available.'
     else:
-        total1 = numpy.array(num_list, float).sum()
-    
-def math_method():
-    global num_list, total2
-    total2 = math.fsum(num_list)
+        total = numpy.array(nlist, float).sum()
+    print("numpy: {}".format(total))  # pylint: disable=C0325
 
-def native_method():
-    global num_list, total3
-    total3 = sum(num_list)
 
-input_str = sys.stdin.read().strip()
-str_list = input_str.split()
-num_list = [decimal.Decimal(i) for i in str_list]
+def math_method(nlist):
+    """
+    Calculate using the math module from the standard library.
+    """
+    total = math.fsum(nlist)
+    print('math.fsum(): {}'.format(total))  # pylint: disable=C0325
 
-print('')
 
-numpy_method()
-print("numpy: {}".format(total1))
+def native_method(nlist):
+    """
+    Calculate using the native sum() function.
+    """
+    total = sum(nlist)
+    print('sum(): {}'.format(total))  # pylint: disable=C0325
 
-math_method()
-print('math.fsum(): {}'.format(total2))
 
-native_method()
-print('sum(): {}'.format(total3))
+def main():
+    """
+    Get a list a numbers from the user, and sum them up three ways.
+    """
+    input_str = sys.stdin.read().strip()
+    str_list = input_str.split()
+    num_list = [decimal.Decimal(i) for i in str_list]
+    print('')  # pylint: disable=C0325
+
+    # Find the sum.
+    numpy_method(num_list)
+    math_method(num_list)
+    native_method(num_list)
+
+if __name__ == '__main__':
+    main()
