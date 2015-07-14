@@ -6,6 +6,8 @@
 
 // "cjh.h" gives us the substr(char*, int, int) function.
 
+// This version is behind the Python version in terms of features.
+
 void sigintHandler(int);
 
 int main (int argc, char *argv[])
