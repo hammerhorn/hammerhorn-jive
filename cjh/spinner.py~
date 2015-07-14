@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+import time
+
+from cjh.shell import Cli
+
+def spin():
+    try:
+        while True:
+            Cli.write('/')
+            time.sleep(.25)
+            Cli.write('\b|')
+            time.sleep(.25)
+            Cli.write('\b\\')
+            time.sleep(.25)
+            Cli.write('\b-')
+            time.sleep(.25)
+            Cli.write('\b')
+    except KeyboardInterrupt: return
