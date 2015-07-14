@@ -7,5 +7,13 @@ Contains modules for:
     - working with dice, and go boards
     - working with musical tones
     - calculating paychecks based on an hourly wage.
+
+This package uses the 'config.json' file to control configuration.
+
+Attributes:
+----------
+shell - can be bash or Tk
+terminal - name of terminal emulator, e.g., 'terminator -x '
+editor - default text editor, e.g., emacs, vi, gedit, ...
 """
 __author__ = "Chris Horn <hammerhorn@gmail.com>"
