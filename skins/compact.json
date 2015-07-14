@@ -1,0 +1,10 @@
+{
+  "origin": ".", 
+  "hoshi": ".", 
+  "empty": ".", 
+  "black": "X", 
+  "y_axis": ".", 
+  "star": "*", 
+  "white": "O", 
+  "x_axis": "."
+}
