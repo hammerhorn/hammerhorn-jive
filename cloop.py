@@ -108,11 +108,11 @@ def main():
 
                 # There is probably a better way 
                 # than having to run the code twice....
-                #proc = subprocess.Popen('./a.out', shell=True)
-                #proc.wait()
-                output = subprocess.check_output('./a.out', shell=True)
-                if not output.endswith('\n'):
-                    print('\033[7m\033[1m%\033[0m')
+                proc = subprocess.Popen('./a.out', shell=True)
+                proc.wait()
+                #output = subprocess.check_output('./a.out', shell=True)
+                #if not output.endswith('\n'):
+                #print('\033[7m\033[1m%\033[0m')
 
     except KeyboardInterrupt:
         sys.stdout.write('\b\b\b')
