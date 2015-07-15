@@ -14,10 +14,12 @@ for arg in sys.argv[1:]:
 
 
 def main():
+    global command
+
     # Compile Java source.
     os.system('javac {} 2>&1 >/dev/null|more'.format(javafiles))
 
-    # Compile to an executable, strip, and make executable.
+    # Compile to an executable, strip, and mark as executable.
     command += '{} && gcj --main={}'.format(classfiles, sys.argv[1])
     command += '{0} -o {1} && rm -f {0} && strip -s {1} && chmod +x {1}'.format(
         ofiles, sys.argv[1])
