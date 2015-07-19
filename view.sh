@@ -2,11 +2,19 @@
 if [[ -z $1 ]]
    then read -p "filename: " filename
 else
-   filename=$@
+   filename="$*"
 fi
 
 clear
 cat "$filename"
-for i in $(seq `cat "$filename"|wc -l` $(expr `tput lines` - 2) ); do 
-   echo 
-   done  
+lines=$(wc -l "$filename"|cut -d' ' -f1) 
+screenh=$(( $(tput lines) - 2 ))
+for((n=lines; n<=screenh; n++))
+{
+  echo
+}
+
+#for i in $(seq "$lines" "$screenh")
+#  do 
+#    echo 
+#  done  
