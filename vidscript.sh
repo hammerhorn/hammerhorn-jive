@@ -4,7 +4,7 @@
 
 
 echo "$@"
-VID=`youtube-dl --get-filename $@`
+VID=$(youtube-dl --get-filename "$@")
 printf "Filename: %s\n" $VID
-youtube-dl $@
+youtube-dl "$@"
 fgconsole 2> /dev/null && mplayer -vo fbdev $VID || mplayer $VID
