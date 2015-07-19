@@ -1,33 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Takes a list of numbers from the command line or stdin, and writes
-   the sum to stdout. */
-
 int main(int argc, char *argv[])
 {
-    double numbers[10],
-           total = 0.0;
+    double total = 0.0;
     int count;
 
-    // If args present, add them up.
     if(argc > 1)
-        for(count = 1; count < argc; count++)
-            total += atof(argv[count]);
-
-    // Otherwise, get values from stdin and add them up
+	for(count = 1; count < argc; count++) {
+	    total += atof(argv[count]);
+	}
     else {
-        float tab[1000];
-        int i = 0;
+	float tab[1000];
+	int i = 0,
+            vals_read;
 
-        while(feof(stdin) == 0){
-            fscanf(stdin, "%f\n", &tab[i]);
-            total += tab[i];
-            i++;
-        }
+
+	while(feof(stdin) == 0) {
+	    vals_read = fscanf(stdin, "%f\n", &tab[i]);
+	    total += tab[i];
+	    i += vals_read;
+	}
     }
 
-    // Output the total.
     printf("%g\n", total);
     return 0;
 }
