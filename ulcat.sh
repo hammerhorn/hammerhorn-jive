@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 tput smul
-cat $@
+cat "$@"
 tput rmul

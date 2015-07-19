@@ -1,3 +1,5 @@
+# Builds the 3 separate executables: 'cloop', 'c++loop', 'f90loop'.
+
 all: cloop c++loop f90loop
 
 cloop: cloop.o cjh.o
@@ -20,6 +22,3 @@ f90loop.o: f90loop.c
 
 cjh.o: cjh.c
 	gcc -O2 -c cjh.c
-
-
-

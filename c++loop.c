@@ -4,7 +4,6 @@
 #include <string.h>
 
 void sigintHandler (int);
-char *substr (char *, int, int);
 
 main (int argc, char *argv[])
 {
@@ -66,13 +65,4 @@ sigintHandler (int sig_num)
   remove("./tmp.c");
   remove("./a.out");
   exit (0);
-}
-
-char *
-substr (char *buf, int start, int end)
-{
-  char *subbuff = malloc (end - start + 1);
-  strncpy (subbuff, buf + start, end);
-  subbuff[end] = '\0';
-  return subbuff;
 }

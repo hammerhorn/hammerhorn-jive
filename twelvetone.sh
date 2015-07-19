@@ -1,11 +1,13 @@
 #!/bin/bash
 
-function replace-and-play(){
+function replace-and-play()
+{
    mv -f tmp1 tmp
    write-and-play
 }
 
-function write-and-play() {
+function write-and-play() 
+{
    # print-title
    echo "Data written to 'tmp'"
    # ./write-ogg.py $(java listfreqs $(cat tmp)) &&
