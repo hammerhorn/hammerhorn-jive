@@ -2,11 +2,15 @@
 
 for i in *
   do
-    if (grep "$1" "$i" > /dev/null)
+    if [[ -d "$i" ]]
+      then :
+    
+    elif grep "$1" "$i" > /dev/null
       then
-        echo -en "\n$i"| ./ulcat.sh
+        echo -n "$i"| bin/ulcat.sh
         echo ": "
-        nl "$i"| grep --color "$1"
+        #nl "$i"| grep --color "$1"
+        grep -n --color "$1" "$i"
         echo
     fi
   done

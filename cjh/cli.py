@@ -222,7 +222,7 @@ class Cli(Shellib):
 
         [+]"some message"
         """
-        print('\n[+] "{}"\n'.format(msg)) #pylint: disable=C0325
+        print('[+] "{}"'.format(msg)) #pylint: disable=C0325
 
     @classmethod
     def outputf(cls, msg=None, heading=""):
