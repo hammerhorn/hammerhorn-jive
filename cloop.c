@@ -5,7 +5,6 @@
 #include "cjh.h"
 
 // "cjh.h" gives us the substr(char*, int, int) function.
-
 // This version is behind the Python version in terms of features.
 
 void sigintHandler(int);
@@ -34,7 +33,7 @@ int main (int argc, char *argv[])
 	        index++;
         len = index;
         for(index = 0; index < len; index++){
- 	        if(!strcmp(substr(lines[index], 0, 8), "#include"))
+ 	        if(strcmp(substr(lines[index], 0, 8) == 0, "#include"))
 	            strcat(includes, lines[index]);
 	        else
 	            strcat(total, lines[index]);
@@ -49,7 +48,7 @@ int main (int argc, char *argv[])
         fclose(file_ptr);
 
         // Uses Tiny C Compiler
-        if(!system("tcc ./tmp.c"))
+        if(system("tcc ./tmp.c") == 0)
 	        system("./a.out");
     }
     return 0;
