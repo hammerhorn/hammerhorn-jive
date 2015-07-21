@@ -1,5 +1,3 @@
-//package MyIO;
-
 import java.io.*;
 
 public class Keyboard
