@@ -16,7 +16,6 @@ from cjh.config import Config
 
 __author__ = 'Chris Horn <hammerhorn@gmail.com>'
 
-# GLOBALS
 CONFIG = Config()
 SHELL = CONFIG.start_user_profile()
 
@@ -30,11 +29,9 @@ else:
 
 def main():
     """
-    Takes a list of frequencies in Hz as args, writes each tone to a WAV
-    file, mixes them down to an OGG file, and then deletes the WAV files.
+    Takes a list of frequencies in Hz as args, writes an OGG file.
     """
-    # If '-h', print a help message and exit.
-    if '-h' in sys.argv or '--help' in sys.argv:
+    if {'-h', '--help'} & set(sys.argv):
         SHELL.output(__doc__)
         sys.exit(0)
 
@@ -45,7 +42,7 @@ def main():
                 count, sys.argv[count + 1])
             proc = subprocess.Popen(command, shell=True)
             proc.wait()
-            #SHELL.notify('Wrote {}.wav'.format(count))
+
     except (OSError, subprocess.CalledProcessError):
         sys.exit('Writing of WAV files failed.  Exiting.')
 
@@ -64,11 +61,9 @@ def main():
     except (OSError, subprocess.CalledProcessError):
         if os.path.exists('out.ogg'):
             os.remove('out.ogg')
-        # remove glob wav
         sys.exit("Attempt to create 'out.ogg' failed.")
     finally:
         # Clean up the WAV files we created.
-        #SHELL.notify('Cleaning up WAV files')
         for count in range(len(sys.argv[1:])):
             if os.path.exists('{}.wav'.format(count)):
                 os.remove('{}.wav'.format(count))
