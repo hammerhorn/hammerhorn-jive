@@ -23,7 +23,7 @@ def parse_help_flag():
     if '-h', print help and exit
     """
     if '-h' in sys.argv or '--help' in sys.argv:
-        print('use: cowscript [message]')
+        print('use: cowscript [message]')  #pylint: disable=C0325
         sys.exit(0)
 
 def define_text():

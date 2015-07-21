@@ -91,7 +91,7 @@ def main():
 
         SHELL.output(string.format(answer))
         if SHELL.interface in ['bash']:
-            SHELL.wait(gui=False)
+            SHELL.wait() #gui=False)
 
     if ARGS.wait:
         SHELL.wait(ARGS.text)
@@ -113,7 +113,8 @@ def main():
         answer = list_[SHELL.list_menu(list_) - 1]
         SHELL.output(string.format(answer))
 
-    SHELL.main_window.mainloop()
+    if SHELL == 'Tk':
+        SHELL.main_window.mainloop()
 
 #    if SHELL.interface in ["Tk"]:
 #        SHELL.main_window.after(250, SHELL.main_window.destroy)
