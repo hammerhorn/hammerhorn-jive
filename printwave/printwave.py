@@ -9,14 +9,12 @@ from cjh import cli
 
 cli.Cli()
 cli.Cli.clear()
-
-# Print title
 print(' ' * 30 + 'SINE WAVE')
 print(' ' * 15 + 'CREATIVE COMPUTING  MORRISTOWN, NEW JERSEY\n')
 cli.Cli.wait()
 print('\n' * 4)
 
-toggle = False
+toggle = 0
 iter_count = 0
 try:
     cli.write('\033[?25l')
@@ -25,12 +23,12 @@ try:
         width = cli.Cli.width()
         indent = int((width - 10) * math.sin(s) + width - 8) // 2
         cli.write(' ' * indent)
-        if(toggle == True):
+        if(toggle == 1):
             print('CREATIVE')
-            toggle = False
+            toggle = 0
         else:
             print('COMPUTING')
-            toggle = True
+            toggle = 1
         time.sleep(.025)
         iter_count += 1
 except KeyboardInterrupt:
