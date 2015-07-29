@@ -1,0 +1,6 @@
+{
+  "terminal": "terminator -e", 
+  "shell": "Tk", 
+  "editor": "scite", 
+  "language": "EN"
+}

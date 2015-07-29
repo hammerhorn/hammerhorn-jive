@@ -48,6 +48,8 @@ while [[ "$command" != [qQxX] ]]; do
          echo -e "_\bR_\bE_\bV_\bE_\bR_\bS_\bE\n" |ul
          ./mirror.pl < tmp > tmp1
          replace-and-play
+         ./draw_row.py < tmp
+
       ;;
 
       r|R)
@@ -55,24 +57,28 @@ while [[ "$command" != [qQxX] ]]; do
          echo -e "_\bR_\bO_\bT_\bA_\bT_\bE\n" |ul
          ./rotate.pl < tmp > tmp1 
          replace-and-play
+         ./draw_row.py < tmp
       ;;
 
       p|P|'')
          [[ "$command" = "" ]] && echo -e -n "\033[1Atwelvetone>"  || echo -e -n "\b"; 
          echo -e "_\bP_\bL_\bA_\bY\n"|ul 
          write-and-play
+         ./draw_row.py < tmp
       ;;
 
       -)
          read amount
          ./up.pl $(( -1 * amount )) < tmp > tmp1
-         replace-and-play        
+         replace-and-play   
+         ./draw_row.py < tmp     
       ;;
 
       +)
          read amount
          ./up.pl "$amount" < tmp > tmp1
          replace-and-play
+         ./draw_row.py < tmp
       ;;
 
       l|L)
@@ -88,6 +94,7 @@ while [[ "$command" != [qQxX] ]]; do
          #cat tmp|./flip.pl > tmp1
          ./flip.pl < tmp > tmp1
          replace-and-play
+         ./draw_row.py < tmp
       ;;
 
       s|S)
