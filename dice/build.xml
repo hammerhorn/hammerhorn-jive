@@ -1,0 +1,30 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="."/>
+        <jar destfile="dice.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="dice"/>
+            </manifest>
+        </jar>
+        <jar destfile="drawDie.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="drawDie"/>
+            </manifest>
+        </jar>
+        <jar destfile="die6x2.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="die6x2"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

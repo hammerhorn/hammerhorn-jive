@@ -1,3 +1,6 @@
 #!/bin/sh
-mv ./src/*.java .
+ant compile
+ant jar
+ant clean
+chmod +x *.jar
 make
