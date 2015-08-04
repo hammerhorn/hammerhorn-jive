@@ -6,6 +6,7 @@ Classes relating to music.
 import decimal, math, os
 
 from cjh.angles import Angle
+from cjh.cli import Cli
 from cjh.kinematics import Disp, Velocity
 from cjh.scalars import Scalar, Unit
 from cjh.things import Thing
@@ -24,7 +25,7 @@ class Pitch(SoundWave):
         self.speed = Velocity(340.29, 'm/s')
         if freq:
             self.set_all_by_freq(freq)
-        else:
+        else: 
             self.set_all_by_letter(octave, notename, cents)
 
         # Finalize label & set wlength
@@ -330,7 +331,7 @@ class Pitch(SoundWave):
         return string
 
     def details(self):
-        string = '\n{}\n'.format(self.ul_label())
+        string = '\n{}\n'.format(Cli.term_fx('un', self.label))
         string += '{}\n'.format(self.freq)
         string += self.halfsteps_info()
         return string
