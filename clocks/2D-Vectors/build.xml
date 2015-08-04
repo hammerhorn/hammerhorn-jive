@@ -1,0 +1,32 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="."/>
+        <jar destfile="VectorDemo.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="VectorDemo"/>
+            </manifest>
+        </jar>
+        <jar destfile="VectorSum.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="VectorSum"/>
+            </manifest>
+        </jar>
+        <jar destfile="VectorDiff.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="VectorDiff"/>
+            </manifest>
+        </jar>
+
+
+    </target>
+</project>
