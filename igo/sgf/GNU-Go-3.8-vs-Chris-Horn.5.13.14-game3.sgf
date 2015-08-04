@@ -1,0 +1,22 @@
+(;GM[1]FF[4]
+CA[UTF-8]
+AP[Quarry:0.2.0]
+SZ[9]
+HA[0]
+KM[6.5]
+PB[Chris Horn]
+PW[GNU Go 3.8]
+RE[W+41.5]
+;B[ee];W[cg];B[eg];W[cd];B[gc];W[gg];B[dc];W[cc];B[gf];W[fg]
+;B[cb];W[eh];B[dg];W[ff];B[fe];W[ef];B[df];W[de];B[ce];W[dd]
+;B[cf];W[be];B[bg];W[db];B[ch];W[ge];B[hf];W[gd];B[fd];W[fc]
+;B[hg];W[hh];B[dh];W[gb];B[fh];W[gh];B[ei];W[bf];B[gi];W[ed]
+;B[hi];W[ih];B[fi];W[ad];B[af];W[ae];B[ag];W[ii];B[];W[]C[White: 36 \
+territory + 9 captures + 6.5 komi = 51.5
+Black: 8 territory + 2 captures = 10.0
+
+White wins by 41.5]
+TB[cg][eh][ah:bi][ci:di]
+TW[aa:ia][ab:cb][eb:fb][hb:ib][ac:bc][dc:ec][gc:ic][bd][fd]
+[ee:fe][hd:ie][gf:if][hg:ig]
+)

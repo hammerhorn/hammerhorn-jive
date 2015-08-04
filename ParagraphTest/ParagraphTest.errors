@@ -1,0 +1,7 @@
+----------
+1. WARNING in /home/cjhorn/src/Java/debug/ParagraphTest.java (at line 10)
+	ArrayList<Paragraph> pList = new ArrayList<Paragraph>();
+	                     ^^^^^
+The value of the local variable pList is not used
+----------
+1 problem (1 warning)

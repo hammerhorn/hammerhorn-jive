@@ -1,0 +1,46 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="."/>
+        <jar destfile="AccelTest.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="AccelTest"/>
+            </manifest>
+        </jar>
+        <jar destfile="AccelDiff.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="AccelDiff"/>
+            </manifest>
+        </jar>
+        <jar destfile="AccelSum.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="AccelSum"/>
+            </manifest>
+        </jar>
+        <jar destfile="AccelTest1.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="AccelTest1"/>
+            </manifest>
+        </jar>
+        <jar destfile="AccelTest2.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="AccelTest2"/>
+            </manifest>
+        </jar>
+        <jar destfile="accel_.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="accel_"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
+

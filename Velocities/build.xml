@@ -1,0 +1,32 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="."/>
+        <jar destfile="VelTest.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="VelTest"/>
+            </manifest>
+        </jar>
+        <jar destfile="VelSum.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="VelSum"/>
+            </manifest>
+        </jar>
+        <jar destfile="VelDiff.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="VelDiff"/>
+            </manifest>
+        </jar>
+
+
+    </target>
+</project>

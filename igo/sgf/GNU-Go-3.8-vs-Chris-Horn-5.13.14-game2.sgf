@@ -1,0 +1,16 @@
+(;GM[1]FF[4]
+CA[UTF-8]
+AP[Quarry:0.2.0]
+SZ[9]
+HA[0]
+KM[6.5]
+PB[Chris Horn]
+PW[GNU Go 3.8]
+RE[W+Resign]
+;B[ee];W[ce];B[ed];W[dc];B[ec];W[db];B[eb];W[gg];B[gc];W[dg]
+;B[eg];W[eh];B[df];W[cg];B[cf];W[bf];B[dd];W[cd];B[fh];W[fg]
+;B[dh];W[ef];B[ei];W[eg];B[gf];W[ge];B[ff];W[fe];B[hf];W[he]
+;B[hg];W[hh];B[ie];W[id];B[hd];W[ic];B[fd];W[if];B[gd];W[ig]
+;B[ib];W[hb];B[hc];W[ia];B[gb];W[de];B[ga];W[ie];B[da];W[cb]
+;B[ca];W[bb];B[ba];W[ab];B[ea];W[fb];B[ha];W[ib];
+)

@@ -1,0 +1,20 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="."/>
+        <jar destfile="Theta2Slope.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="Theta2Slope"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
