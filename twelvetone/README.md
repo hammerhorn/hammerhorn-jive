@@ -1,8 +1,8 @@
 ## Twelvetone Editor
 
-Generates random *tone rows* for 12-tone serialism.
+Randomly generates a *tone row* (12-tone, *serialism*) and performs some basic transformations.
 
-Type `./make.sh` to compile, then `./twelvetone.sh` to run.
+Type `./make.sh` to compile, then `./twelvetone.sh` to run the program.
 
 ### How it Works
 When you enter a command at the `twelvetone>` prompt, the row is edited.
