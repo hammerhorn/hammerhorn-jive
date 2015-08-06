@@ -74,7 +74,8 @@ VectorSum.py [mag1] [ang1] [mag2] [ang2]
         vector2 = Vector(mag2, angle2)
         vector_sum = vector1 + vector2
         SHELL.output(str(vector_sum))
-        SHELL.main_window.mainloop()
-
+        if SHELL != Cli:
+            SHELL.main_window.mainloop()
+ 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,7 @@
+{
+  "terminal": "terminator -x", 
+  "shell": "bash", 
+  "editor": "tk_text.py", 
+  "language": "EN", 
+  "acsiimation": "bounce_demo.py"
+}

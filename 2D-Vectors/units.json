@@ -1,0 +1,20 @@
+{
+  "units":"units",                                                             
+  "in.":"inches",                                                            
+  "ft.":"feet",                                                              
+  "yds.":"yards",                                                             
+  "mi.":"miles",                                                             
+  "Hz":"Hertz",                                                             
+  "m":"meters",                                                            
+  "cm":"centimeters",                                                       
+  "m/s":"meters per second",                                                 
+  "mph":"miles per hour",                                                    
+  "rad":"radians",                                                           
+  "deg":"degrees",                                                           
+  "(pi) rad":"times pi radians",                                                  
+  "g":"grams",                                                             
+  "units^2":"square units",                                                      
+  "m^2":"square meters",                                                     
+  "cm^2":"centimeters squared",                                               
+  "sq. in.":"square inches"
+} 
